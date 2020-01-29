@@ -2,7 +2,7 @@
 
 **Open-Source Admin Dashboard** coded in **[Django Framework](https://www.djangoproject.com/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
 
-### App Features:
+### Dashboard Features:
 
 - SQLite, Django native ORM
 - Modular design
