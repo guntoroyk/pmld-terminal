@@ -1,8 +1,8 @@
 # [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis)
 
-**Open-Source Admin Panel** coded in **Django Framework** on top of **Atlantis Dashboard** design - Provided by **AppSeed - [Web App Generator](https://appseed.us/app-generator)**.
+**Open-Source Web App** coded in **[Django Framework](https://www.djangoproject.com/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
 
-**Features**:
+### App Features:
 
 - SQLite, Django native ORM
 - Modular design
@@ -83,4 +83,4 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 <br />
 
 ---
-[Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Provided by **AppSeed - [Web App Generator](https://appseed.us/app-generator)**
+[Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
