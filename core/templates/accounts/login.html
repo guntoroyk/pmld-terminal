@@ -40,7 +40,11 @@
                             {% if msg %}
                                 <span class="text-danger">{{ msg | safe }}</span>
                             {% else %}
-                                <span>Login</span>
+                            <span>
+                                Use default credentials: <strong>test / ApS12_ZZs8</strong>
+                                <br />
+                                OR <strong> <a href={% url 'register' %} >create your own user</a> </strong>
+                            </span>
                             {% endif %}
 
                         </div>

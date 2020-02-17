@@ -1,7 +1,7 @@
 {
-  "name": "django-dashboard-atlantis",
-  "version": "1.0.0",
-  "description": "A simple UI-Ready Django boilerplate.",
+  "name": "priv-django-dashboard-atlantis",
+  "version": "1.0.1",
+  "description": "Commercial UI-Ready Django boilerplate.",
   "scripts": {
     "lint": "eslint ."
   },
@@ -14,16 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/app-generator/django-dashboard-atlantis"
+    "url": "https://github.com/app-generator/priv-django-dashboard-atlantis"
   },
   "keywords": [
     "django",
     "admin-panel",
-    "open-source"
+    "black-design",
+    "commercial"
   ],
   "author": "AppSeed.us",
   "contributors": [
     "AppSeed Support <support@appseed.us>"
   ],
-  "license": "MIT"
+  "license": "Commercial"
 }
