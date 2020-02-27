@@ -30,7 +30,7 @@
 
 - [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Product page
 - [Django Dashboard Atlantis](https://django-dashboard-atlantis.appseed.us/) - LIVE Demo
-- [Django Dashboard Atlantis Dark](https://docs.appseed.us/admin-dashboards/django-dashboard-atlantis-dark/) - Documentation
+- [Django Dashboard Atlantis](https://docs.appseed.us/admin-dashboards/django-dashboard-atlantis-dark/) - Documentation
 
 <br />
 
@@ -199,9 +199,9 @@ Start fast your next Django project by using functional admin dashboards enhance
 
 A dashboard is a set of pages that are easy to read and offer information to the user in real-time regarding his business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
 
-### [Atlantis Dark Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)
+### [Atlantis Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)
 
-**[Atlantis Dark Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** is a free bootstrap 4 admin dashboard that is beautifully and elegantly designed to display various metrics, numbers or data visualization. Atlantis Dark admin dashboard has 2 layouts, many plugins and UI components to help developers create dashboards quickly and effectively so they can save development time and also help users to make the right and fast decisions based on existing data. - provided by **ThemeKita**.
+**[Atlantis Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** is a free bootstrap 4 admin dashboard that is beautifully and elegantly designed to display various metrics, numbers or data visualization. Atlantis Dark admin dashboard has 2 layouts, many plugins and UI components to help developers create dashboards quickly and effectively so they can save development time and also help users to make the right and fast decisions based on existing data. - provided by **ThemeKita**.
 
 <br />
 
