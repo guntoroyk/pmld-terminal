@@ -1,6 +1,7 @@
 # [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis)
 
 **Open-Source Admin Dashboard** coded in **[Django Framework](https://www.djangoproject.com/)** on top of **Atlantis Dashboard** design (free version) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+
 <br />
 
 > Enjoy this project? **Join our efforts** to actively support the open-source ecosystem via a **[PayPal.me donation](https://paypal.me/appseed)**. Thank you!
