@@ -15,10 +15,6 @@ from django.http import HttpResponse
 from .forms import LoginForm, SignUpForm
 
 def login_view(request):
-
-    if request.user.is_authenticated:
-        return redirect('/')
-
     form = LoginForm(request.POST or None)
 
     msg = None
@@ -41,7 +37,8 @@ def login_view(request):
 
 def register_user(request):
 
-    msg = None
+    msg     = None
+    success = False
 
     if request.method == "POST":
         form = SignUpForm(request.POST)
@@ -50,8 +47,10 @@ def register_user(request):
             username = form.cleaned_data.get("username")
             raw_password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=raw_password)
+
+            msg     = 'User created.'
+            success = True
             
-            msg = 'User created, please login'
             #return redirect("/login/")
 
         else:
@@ -59,4 +58,4 @@ def register_user(request):
     else:
         form = SignUpForm()
 
-    return render(request, "accounts/register.html", {"form": form, "msg" : msg})
+    return render(request, "accounts/register.html", {"form": form, "msg" : msg, "success" : success })
