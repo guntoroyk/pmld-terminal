@@ -27,15 +27,6 @@ This product is **built based on community feedback**. Feel free (anonymously) t
 
 <br />
 
-## Deployment Scripts
-
-- **Heroku** - Cloud Application Platform
-- **Docker** - execute the app using a sandboxed container
-- **Gunicorn** / Nginx - a common used configuration for Django Apps
-- **Waitress** - Gunicorn equivalent for Windows.       
-
-<br />
-
 ## Dashboard Links
 
 - [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Product page
