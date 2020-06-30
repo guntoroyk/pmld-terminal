@@ -1,6 +1,6 @@
 # [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
+> **Open-Source Admin Dashboard** coded in **Django Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
 - UI Kit: **[Atlantis Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** (Free version) provided by **ThemeKita**
 - UI-Ready app, SQLite Database, Django Native ORM
@@ -34,7 +34,7 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 <br />
 <br />
 
-![Django Dashboard Atlantis - Open-Source Web App.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-atlantis-screen.png)
+![Django Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis/master/media/django-dashboard-atlantis-screen.png)
 
 <br />
 
