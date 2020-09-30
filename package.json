@@ -1,30 +1,24 @@
 {
-  "name": "priv-django-dashboard-atlantis",
+  "name": "django-dashboard-atlantis",
+  "mastertemplate": "boilerplate-code-django-dashboard",
   "version": "1.0.1",
-  "description": "Commercial UI-Ready Django boilerplate.",
+  "description": "Template project - Django Boilerplate Code",
   "scripts": {
-    "lint": "eslint ."
-  },
-  "engines": {
-    "node": "8.11.3"
-  },
-  "devDependencies": {
-    "eslint": "5.0.0",
-    "eslint-config-google": "0.9.1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/app-generator/priv-django-dashboard-atlantis"
+      "type": "git",
+      "url": "https://github.com/app-generator/django-dashboard-atlantis"
   },
-  "keywords": [
-    "django",
-    "admin-panel",
-    "black-design",
-    "commercial"
-  ],
-  "author": "AppSeed.us",
-  "contributors": [
-    "AppSeed Support <support@appseed.us>"
-  ],
-  "license": "Commercial"
+  "bugs": {
+      "url": "https://github.com/app-generator/django-dashboard-atlantis/issues",
+      "email": "support@appseed.us"
+  },
+  "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
+  "engines": {
+      "node": ">=10.0.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
 }
