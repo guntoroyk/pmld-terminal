@@ -22,9 +22,9 @@
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
 
-| [Django AtlantisDark PRO](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django Dashboard Argon PRO](https://appseed.us/admin-dashboards/django-dashboard-argon-pro) |
-| --- | --- | --- |
-| [![Django AtlantisDark PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis-dark-pro/master/media/django-dashboard-atlantis-dark-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro) | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-black-pro/master/media/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-argon-pro/master/media/django-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-argon-pro)
+| [Django AtlantisDark PRO](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro)                                                                                                                                                   | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro)                                                                                                                                   | [Django Dashboard Argon PRO](https://appseed.us/admin-dashboards/django-dashboard-argon-pro)                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![Django AtlantisDark PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis-dark-pro/master/media/django-dashboard-atlantis-dark-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro) | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-black-pro/master/media/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-argon-pro/master/media/django-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-argon-pro) |
 
 <br />
 <br />
@@ -37,8 +37,8 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-atlantis.git
-$ cd django-dashboard-atlantis
+$ git clone https://github.com/guntoroyk/pmld-terminal.git
+$ cd pmld-terminal
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
@@ -106,14 +106,14 @@ The project is coded using a simple and intuitive structure presented bellow:
    |
    |-- authentication/                     # Handles auth routes (login and register)
    |    |
-   |    |-- urls.py                        # Define authentication routes  
-   |    |-- views.py                       # Handles login and registration  
-   |    |-- forms.py                       # Define auth forms  
+   |    |-- urls.py                        # Define authentication routes
+   |    |-- views.py                       # Handles login and registration
+   |    |-- forms.py                       # Define auth forms
    |
    |-- app/                                # A simple app that serve HTML files
    |    |
    |    |-- views.py                       # Serve HTML pages for authenticated users
-   |    |-- urls.py                        # Define some super simple routes  
+   |    |-- urls.py                        # Define some super simple routes
    |
    |-- requirements.txt                    # Development modules - SQLite storage
    |
@@ -130,7 +130,7 @@ The project is coded using a simple and intuitive structure presented bellow:
 - Django bootstrapper `manage.py` uses `core/settings.py` as the main configuration file
 - `core/settings.py` loads the app magic from `.env` file
 - Redirect the guest users to Login page
-- Unlock the pages served by *app* node for authenticated users
+- Unlock the pages served by _app_ node for authenticated users
 
 <br />
 
@@ -139,6 +139,7 @@ The project is coded using a simple and intuitive structure presented bellow:
 The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
 
 ### [Docker](https://www.docker.com/) execution
+
 ---
 
 The application can be easily executed in a docker container. The steps:
@@ -161,6 +162,7 @@ Visit `http://localhost:5005` in your browser. The app should be up & running.
 <br />
 
 ### [Gunicorn](https://gunicorn.org/)
+
 ---
 
 Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
@@ -170,6 +172,7 @@ Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
 ```bash
 $ pip install gunicorn
 ```
+
 > Start the app using gunicorn binary
 
 ```bash
@@ -179,10 +182,10 @@ Serving on http://localhost:8001
 
 Visit `http://localhost:8001` in your browser. The app should be up & running.
 
-
 <br />
 
 ### [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/)
+
 ---
 
 Waitress (Gunicorn equivalent for Windows) is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones that live in the Python standard library.
@@ -192,6 +195,7 @@ Waitress (Gunicorn equivalent for Windows) is meant to be a production-quality p
 ```bash
 $ pip install waitress
 ```
+
 > Start the app using [waitress-serve](https://docs.pylonsproject.org/projects/waitress/en/stable/runner.html)
 
 ```bash
@@ -212,4 +216,5 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
+
 [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
