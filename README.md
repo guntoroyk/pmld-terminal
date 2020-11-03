@@ -9,24 +9,6 @@
 - Deployment scripts: Docker, Gunicorn / Nginx
 - Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
 
-> Links
-
-- [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Product page
-- [Django Dashboard Atlantis - Demo](https://django-dashboard-atlantis.appseed.us/) - LIVE Deployment
-- [Django Dashboard Atlantis - Docs](https://docs.appseed.us/admin-dashboards/django-dashboard-atlantis/) - Product documentation
-- [Atlantis Lite - UI Documentation](https://atlantis-lite.appseed.us/)
-
-<br />
-
-## Want more? Go PRO!
-
-PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
-
-| [Django AtlantisDark PRO](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro)                                                                                                                                                   | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro)                                                                                                                                   | [Django Dashboard Argon PRO](https://appseed.us/admin-dashboards/django-dashboard-argon-pro)                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Django AtlantisDark PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis-dark-pro/master/media/django-dashboard-atlantis-dark-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro) | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-black-pro/master/media/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-argon-pro/master/media/django-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-argon-pro) |
-
-<br />
 <br />
 
 ![Django Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis/master/media/django-dashboard-atlantis-screen.png)
@@ -147,8 +129,8 @@ The application can be easily executed in a docker container. The steps:
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-dashboard-atlantis.git
-$ cd django-dashboard-atlantis
+$ git clone https://github.com/guntoroyk/pmld-terminal.git
+$ cd pmld-terminal
 ```
 
 > Start the app in Docker
