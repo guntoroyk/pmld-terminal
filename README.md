@@ -22,13 +22,19 @@ $ # Get the code
 $ git clone https://github.com/guntoroyk/pmld-terminal.git
 $ cd pmld-terminal
 $
+$ # Use python > 3.6
+$
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
 $ source env/bin/activate
 $
+$ # or using (venv)[https://docs.python.org/3/tutorial/venv.html]
+$ python3 -m venv env
+$ source env/bin/activate
+$
 $ # Virtualenv modules installation (Windows based systems)
-$ # virtualenv env
-$ # .\env\Scripts\activate
+$ virtualenv env
+$ .\env\Scripts\activate
 $
 $ # Install modules - SQLite Storage
 $ pip3 install -r requirements.txt
