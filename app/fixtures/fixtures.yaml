@@ -98,7 +98,7 @@
   pk: 13
   fields:
     nama_po: Langsung Jaya
-    plat_no: AD 1660 CF
+    plat_no: AD1660CF
     jenis_trayek: AKAP
     jumlah_kursi: 30
     asal_tujuan_trayek: SURABAYA-JOGJA
@@ -106,7 +106,7 @@
   pk: 14
   fields:
     nama_po: Mira
-    plat_no: S 7307 US
+    plat_no: S7307US
     jenis_trayek: AKAP
     jumlah_kursi: 55
     asal_tujuan_trayek: SOLO-JOGJA
@@ -114,7 +114,7 @@
   pk: 15
   fields:
     nama_po: Jaya Putra
-    plat_no: AD 1610 MR
+    plat_no: AD1610MR
     jenis_trayek: AKAP
     jumlah_kursi: 55
     asal_tujuan_trayek: JAKARTA-KLATEN
@@ -122,7 +122,7 @@
   pk: 16
   fields:
     nama_po: Sinar Jaya
-    plat_no: B 7282 MR
+    plat_no: B7282MR
     jenis_trayek: AKAP
     jumlah_kursi: 44
     asal_tujuan_trayek: JAKARTA-JOGJA
@@ -130,7 +130,7 @@
   pk: 17
   fields:
     nama_po: Gunung Harta
-    plat_no: DK 7191 GH
+    plat_no: DK7191GH
     jenis_trayek: AKAP
     jumlah_kursi: 34
     asal_tujuan_trayek: JAKARTA-JOGJA
@@ -138,7 +138,7 @@
   pk: 18
   fields:
     nama_po: Sumber Jaya
-    plat_no: B 7940 IB
+    plat_no: B7940IB
     jenis_trayek: AKAP
     jumlah_kursi: 34
     asal_tujuan_trayek: JAKARTA-JOGJA
