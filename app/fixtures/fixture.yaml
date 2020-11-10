@@ -1,0 +1,240 @@
+- model: app.Bus
+  pk: 1
+  fields:
+    nama_po: Purna
+    plat_no: B7973IZ
+    jenis_trayek: AKAP
+    jumlah_kursi: 40
+    asal_tujuan_trayek: JAKARTA-JOGJA
+- model: app.Bus
+  pk: 2
+  fields:
+    nama_po: Sumber Jaya
+    plat_no: B7131TQ
+    jenis_trayek: AKAP
+    jumlah_kursi: 40
+    asal_tujuan_trayek: JAKARTA-KLATEN
+- model: app.Bus
+  pk: 3
+  fields:
+    nama_po: Sedyo Utomo
+    plat_no: AD1413BR
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SOLO-JOGJA
+- model: app.Bus
+  pk: 4
+  fields:
+    nama_po: Eka
+    plat_no: B7330US
+    jenis_trayek: AKAP
+    jumlah_kursi: 44
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 5
+  fields:
+    nama_po: Mira
+    plat_no: S7827US
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 6
+  fields:
+    nama_po: Sugeng Rahayu
+    plat_no: AD7005UZ
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 7
+  fields:
+    nama_po: Antar Jaya
+    plat_no: AD1714CF
+    jenis_trayek: AKAP
+    jumlah_kursi: 40
+    asal_tujuan_trayek: JAKARTA-JOGJA
+- model: app.Bus
+  pk: 8
+  fields:
+    nama_po: Sinar Jaya
+    plat_no: B7569TGC
+    jenis_trayek: AKAP
+    jumlah_kursi: 44
+    asal_tujuan_trayek: JAKARTA-KLATEN
+- model: app.Bus
+  pk: 9
+  fields:
+    nama_po: Putra Mulya
+    plat_no: AD1420FF
+    jenis_trayek: AKAP
+    jumlah_kursi: 44
+    asal_tujuan_trayek: JAKARTA-KLATEN
+- model: app.Bus
+  pk: 10
+  fields:
+    nama_po: Antar Jaya
+    plat_no: AD1695AF
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SOLO-PURWOKERTO
+- model: app.Bus
+  pk: 11
+  fields:
+    nama_po: Murni Jaya
+    plat_no: A7838KT
+    jenis_trayek: AKAP
+    jumlah_kursi: 38
+    asal_tujuan_trayek: BEKASI-KLATEN
+- model: app.Bus
+  pk: 12
+  fields:
+    nama_po: Sinar Jaya
+    plat_no: B7201FGA
+    jenis_trayek: AKAP
+    jumlah_kursi: 44
+    asal_tujuan_trayek: SOLO-JOGJA
+- model: app.Bus
+  pk: 13
+  fields:
+    nama_po: Langsung Jaya
+    plat_no: AD 1660 CF
+    jenis_trayek: AKAP
+    jumlah_kursi: 30
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 14
+  fields:
+    nama_po: Mira
+    plat_no: S 7307 US
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SOLO-JOGJA
+- model: app.Bus
+  pk: 15
+  fields:
+    nama_po: Jaya Putra
+    plat_no: AD 1610 MR
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: JAKARTA-KLATEN
+- model: app.Bus
+  pk: 16
+  fields:
+    nama_po: Sinar Jaya
+    plat_no: B 7282 MR
+    jenis_trayek: AKAP
+    jumlah_kursi: 44
+    asal_tujuan_trayek: JAKARTA-JOGJA
+- model: app.Bus
+  pk: 17
+  fields:
+    nama_po: Gunung Harta
+    plat_no: DK 7191 GH
+    jenis_trayek: AKAP
+    jumlah_kursi: 34
+    asal_tujuan_trayek: JAKARTA-JOGJA
+- model: app.Bus
+  pk: 18
+  fields:
+    nama_po: Sumber Jaya
+    plat_no: B 7940 IB
+    jenis_trayek: AKAP
+    jumlah_kursi: 34
+    asal_tujuan_trayek: JAKARTA-JOGJA
+- model: app.Bus
+  pk: 19
+  fields:
+    nama_po: Haryanto
+    plat_no: B7151VGA
+    jenis_trayek: AKAP
+    jumlah_kursi: 38
+    asal_tujuan_trayek: JAKARTA-JOGJA
+- model: app.Bus
+  pk: 20
+  fields:
+    nama_po: Sumber Selamat
+    plat_no: W7029UZ
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 21
+  fields:
+    nama_po: Sugeng Rahayu
+    plat_no: W7076UZ
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 22
+  fields:
+    nama_po: Langsung Jaya
+    plat_no: AD1620CP
+    jenis_trayek: AKAP
+    jumlah_kursi: 30
+    asal_tujuan_trayek: SOLO-JOGJA
+- model: app.Bus
+  pk: 23
+  fields:
+    nama_po: Jaya Putra
+    plat_no: AD1465AV
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SOLO-JOGJA
+- model: app.Bus
+  pk: 24
+  fields:
+    nama_po: Eka
+    plat_no: S7051US
+    jenis_trayek: AKAP
+    jumlah_kursi: 44
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 25
+  fields:
+    nama_po: Mira
+    plat_no: S7322US
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 26
+  fields:
+    nama_po: Langsung Jaya
+    plat_no: AD1485CF
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 27
+  fields:
+    nama_po: Mira
+    plat_no: S7166US
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SOLO-JOGJA
+- model: app.Bus
+  pk: 28
+  fields:
+    nama_po: Jaya Putra
+    plat_no: AD1641AU
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
+- model: app.Bus
+  pk: 29
+  fields:
+    nama_po: Purna
+    plat_no: AD1723DF
+    jenis_trayek: AKAP
+    jumlah_kursi: 34
+    asal_tujuan_trayek: JAKARTA-KLATEN
+- model: app.Bus
+  pk: 30
+  fields:
+    nama_po: Mira
+    plat_no: S7287US
+    jenis_trayek: AKAP
+    jumlah_kursi: 55
+    asal_tujuan_trayek: SURABAYA-JOGJA
