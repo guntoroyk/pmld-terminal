@@ -14,7 +14,7 @@ class Bus(models.Model):
     nama_po = models.CharField(max_length=20)
     plat_no = models.CharField(max_length=10)
     jenis_trayek = models.CharField(max_length=5)
-    jumlah_kursi = models.PositiveIntegerField()
+    jumlah_kursi = models.PositiveIntegerField(default=0)
     asal_tujuan_trayek = models.CharField(max_length=50)
 
 
