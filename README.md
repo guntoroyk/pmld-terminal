@@ -42,7 +42,8 @@ $
 $ # Create tables
 $ python manage.py makemigrations
 $ python manage.py migrate
-$
+$ # Isi database dengan ini (windows)
+$ python.exe .\manage.py loaddata .\app\fixtures\fixtures.yaml
 $ # Start the application (development mode)
 $ python manage.py runserver # default port 8000
 $
