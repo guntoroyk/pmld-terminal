@@ -1,19 +1,10 @@
 - model: app.Bus
-  pk: 0
-  fields:
-    nama_po: nama_po
-    plat_no: plat_no
-    jenis_trayek: jenis_trayek
-    jumlah_kursi: jumlah_kursi
-    asal_tujuan_trayek: asal_tujuan_trayek
-- model: app.Bus
   pk: 1
   fields:
     nama_po: Purna
     plat_no: B7973IZ
     jenis_trayek: AKAP
     jumlah_kursi: 40
-    asal_tujuan_trayek: JAKARTA-JOGJA
 - model: app.Bus
   pk: 2
   fields:
@@ -21,7 +12,6 @@
     plat_no: B7131TQ
     jenis_trayek: AKAP
     jumlah_kursi: 40
-    asal_tujuan_trayek: JAKARTA-KLATEN
 - model: app.Bus
   pk: 3
   fields:
@@ -29,7 +19,6 @@
     plat_no: AD1413BR
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SOLO-JOGJA
 - model: app.Bus
   pk: 4
   fields:
@@ -37,7 +26,6 @@
     plat_no: B7330US
     jenis_trayek: AKAP
     jumlah_kursi: 44
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 5
   fields:
@@ -45,7 +33,6 @@
     plat_no: S7827US
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 6
   fields:
@@ -53,7 +40,6 @@
     plat_no: AD7005UZ
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 7
   fields:
@@ -61,7 +47,6 @@
     plat_no: AD1714CF
     jenis_trayek: AKAP
     jumlah_kursi: 40
-    asal_tujuan_trayek: JAKARTA-JOGJA
 - model: app.Bus
   pk: 8
   fields:
@@ -69,7 +54,6 @@
     plat_no: B7569TGC
     jenis_trayek: AKAP
     jumlah_kursi: 44
-    asal_tujuan_trayek: JAKARTA-KLATEN
 - model: app.Bus
   pk: 9
   fields:
@@ -77,7 +61,6 @@
     plat_no: AD1420FF
     jenis_trayek: AKAP
     jumlah_kursi: 44
-    asal_tujuan_trayek: JAKARTA-KLATEN
 - model: app.Bus
   pk: 10
   fields:
@@ -85,7 +68,6 @@
     plat_no: AD1695AF
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SOLO-PURWOKERTO
 - model: app.Bus
   pk: 11
   fields:
@@ -93,7 +75,6 @@
     plat_no: A7838KT
     jenis_trayek: AKAP
     jumlah_kursi: 38
-    asal_tujuan_trayek: BEKASI-KLATEN
 - model: app.Bus
   pk: 12
   fields:
@@ -101,7 +82,6 @@
     plat_no: B7201FGA
     jenis_trayek: AKAP
     jumlah_kursi: 44
-    asal_tujuan_trayek: SOLO-JOGJA
 - model: app.Bus
   pk: 13
   fields:
@@ -109,7 +89,6 @@
     plat_no: AD 1660 CF
     jenis_trayek: AKAP
     jumlah_kursi: 30
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 14
   fields:
@@ -117,7 +96,6 @@
     plat_no: S 7307 US
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SOLO-JOGJA
 - model: app.Bus
   pk: 15
   fields:
@@ -125,7 +103,6 @@
     plat_no: AD 1610 MR
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: JAKARTA-KLATEN
 - model: app.Bus
   pk: 16
   fields:
@@ -133,7 +110,6 @@
     plat_no: B 7282 MR
     jenis_trayek: AKAP
     jumlah_kursi: 44
-    asal_tujuan_trayek: JAKARTA-JOGJA
 - model: app.Bus
   pk: 17
   fields:
@@ -141,7 +117,6 @@
     plat_no: DK 7191 GH
     jenis_trayek: AKAP
     jumlah_kursi: 34
-    asal_tujuan_trayek: JAKARTA-JOGJA
 - model: app.Bus
   pk: 18
   fields:
@@ -149,7 +124,6 @@
     plat_no: B 7940 IB
     jenis_trayek: AKAP
     jumlah_kursi: 34
-    asal_tujuan_trayek: JAKARTA-JOGJA
 - model: app.Bus
   pk: 19
   fields:
@@ -157,7 +131,6 @@
     plat_no: B7151VGA
     jenis_trayek: AKAP
     jumlah_kursi: 38
-    asal_tujuan_trayek: JAKARTA-JOGJA
 - model: app.Bus
   pk: 20
   fields:
@@ -165,7 +138,6 @@
     plat_no: W7029UZ
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 21
   fields:
@@ -173,7 +145,6 @@
     plat_no: W7076UZ
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 22
   fields:
@@ -181,7 +152,6 @@
     plat_no: AD1620CP
     jenis_trayek: AKAP
     jumlah_kursi: 30
-    asal_tujuan_trayek: SOLO-JOGJA
 - model: app.Bus
   pk: 23
   fields:
@@ -189,7 +159,6 @@
     plat_no: AD1465AV
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SOLO-JOGJA
 - model: app.Bus
   pk: 24
   fields:
@@ -197,7 +166,6 @@
     plat_no: S7051US
     jenis_trayek: AKAP
     jumlah_kursi: 44
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 25
   fields:
@@ -205,7 +173,6 @@
     plat_no: S7322US
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 26
   fields:
@@ -213,7 +180,6 @@
     plat_no: AD1485CF
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 27
   fields:
@@ -221,7 +187,6 @@
     plat_no: S7166US
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SOLO-JOGJA
 - model: app.Bus
   pk: 28
   fields:
@@ -229,7 +194,6 @@
     plat_no: AD1641AU
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA
 - model: app.Bus
   pk: 29
   fields:
@@ -237,7 +201,6 @@
     plat_no: AD1723DF
     jenis_trayek: AKAP
     jumlah_kursi: 34
-    asal_tujuan_trayek: JAKARTA-KLATEN
 - model: app.Bus
   pk: 30
   fields:
@@ -245,4 +208,3 @@
     plat_no: S7287US
     jenis_trayek: AKAP
     jumlah_kursi: 55
-    asal_tujuan_trayek: SURABAYA-JOGJA

@@ -16,7 +16,6 @@ def from_csv_to_yaml(file):
             f.write('    plat_no: %s\n' % csv_content[2])
             f.write('    jenis_trayek: %s\n' % csv_content[3])
             f.write('    jumlah_kursi: %s\n' % csv_content[4])
-            f.write('    asal_tujuan_trayek: %s\n' % csv_content[5])
         f.close()
 
 from_csv_to_yaml('Data Bus PMLD - Sheet1.csv')

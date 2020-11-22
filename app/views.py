@@ -8,15 +8,21 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
+from .models import PencatatanBus
+import logging
+
 
 @login_required(login_url="/login/")
 def index(request):
-    
-    context = {}
-    context['segment'] = 'index'
 
-    html_template = loader.get_template( 'index.html' )
-    return HttpResponse(html_template.render(context, request))
+    # context = {}
+    # context['segment'] = 'index'
+
+    # html_template = loader.get_template('index.html')
+    # return HttpResponse(html_template.render(context, request))
+
+    return redirect("/app/index.html")
+
 
 @login_required(login_url="/login/")
 def pages(request):
@@ -24,19 +30,81 @@ def pages(request):
     # All resource paths end in .html.
     # Pick out the html file name from the url. And load that template.
     try:
-        
-        load_template      = request.path.split('/')[-1]
+
+        load_template = request.path.split('/')[-1]
         context['segment'] = load_template
-        
-        html_template = loader.get_template( load_template )
+
+        html_template = loader.get_template(load_template)
         return HttpResponse(html_template.render(context, request))
-        
+
     except template.TemplateDoesNotExist:
 
-        html_template = loader.get_template( 'page-404.html' )
+        html_template = loader.get_template('page-404.html')
         return HttpResponse(html_template.render(context, request))
 
     except:
-    
-        html_template = loader.get_template( 'page-500.html' )
+
+        html_template = loader.get_template('page-500.html')
         return HttpResponse(html_template.render(context, request))
+
+
+@login_required(login_url="/login/")
+def app_home(request):
+
+    context = {}
+    context['segment'] = 'app_home'
+
+    html_template = loader.get_template('app/index.html')
+    return HttpResponse(html_template.render(context, request))
+
+
+@login_required(login_url="/login/")
+def app_pages(request):
+    context = {}
+    # All resource paths end in .html.
+    # Pick out the html file name from the url. And load that template.
+    try:
+
+        load_template = request.path.split('/')[-1]
+        context['segment'] = load_template
+
+        html_template = loader.get_template('app/' + load_template)
+        return HttpResponse(html_template.render(context, request))
+
+    except template.TemplateDoesNotExist:
+
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+
+    except:
+
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
+
+
+@login_required(login_url="/login/")
+def barat_timur(request):
+    context = {}
+
+    data_pencatatan_bus = PencatatanBus.objects.filter(
+        jenis="BT").order_by('-created_at')
+    print(data_pencatatan_bus)
+    # logging.info(data_pencatatan_bus)
+    context['data_pencatatan_bus'] = data_pencatatan_bus
+
+    html_template = loader.get_template('app/barat-timur.html')
+    return HttpResponse(html_template.render(context, request))
+
+
+@login_required(login_url="/login/")
+def timur_barat(request):
+    context = {}
+
+    data_pencatatan_bus = PencatatanBus.objects.all().filter(
+        jenis="TB").order_by('-created_at')
+    print(data_pencatatan_bus)
+    # logging.info(data_pencatatan_bus)
+    context['data_pencatatan_bus'] = data_pencatatan_bus
+
+    html_template = loader.get_template('app/timur-barat.html')
+    return HttpResponse(html_template.render(context, request))
