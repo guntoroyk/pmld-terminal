@@ -12,6 +12,7 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('app', views.app_home, name='app_home'),
     re_path(r'^app/barat-timur*\.*', views.barat_timur, name='barat_timur'),
+    re_path(r'^app/timur-barat*\.*', views.timur_barat, name='timur_barat'),
     re_path(r'^app/.*\.*', views.app_pages, name='app_pages'),
 
     # Matches any html file
