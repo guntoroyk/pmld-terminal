@@ -80,10 +80,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pmld_terminal',
-        'USER': 'qwe123123',
-        'PASSWORD': 'qwe123123',
-        'HOST': 'db4free.net',
+        'NAME': 'pmld_terminal', # nama database mysql mu
+        'USER': 'usermysqlmu',
+        'PASSWORD': 'passwordmysqlmu',
+        'HOST': 'alamatmysqlmu', # contoh localhost, 192.168.1.1, db4free.net, dll
         'PORT': '3306',
     }
 }
