@@ -9,6 +9,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .models import PencatatanBus
+from .forms import PencatatanBusForm
 import logging
 
 
@@ -108,3 +109,29 @@ def timur_barat(request):
 
     html_template = loader.get_template('app/timur-barat.html')
     return HttpResponse(html_template.render(context, request))
+
+
+@login_required(login_url="/login/")
+def add_pencatatan_bus(request):
+    if request.method == 'POST':
+        form = PencatatanBusForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/app/barat-timur.html')
+    form = PencatatanBusForm()
+
+    print(form)
+
+    return render(request, 'app/add-pencatatan-bus.html', {'form': form})
+
+
+@login_required(login_url="/login/")
+def edit_pencatatan_bus(request, pk):
+    # return HttpResponse("You're looking at question %s." % pk)
+    print('masukkkkk')
+    pencatatan_bus = get_object_or_404(PencatatanBus, pk=pk)
+    form = PencatatanBusForm(request.POST or None, instance=pencatatan_bus)
+    if form.is_valid():
+        form.save()
+        return redirect('/app/barat-timur.html')
+    return render(request, 'app/edit-pencatatan-bus.html', {'form': form})

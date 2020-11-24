@@ -23,11 +23,14 @@ class Bus(models.Model):
     plat_no = models.CharField(max_length=10)
     jenis_trayek = models.CharField(max_length=5)
     jumlah_kursi = models.PositiveIntegerField(default=0)
+    asal_tujuan_trayek = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.nama_po + ' - ' + self.plat_no
 
 
 class PencatatanBus(TimeStampMixin):
     jenis = models.CharField(max_length=2)
-    asal_tujuan_trayek = models.CharField(max_length=50)
     waktu_datang = models.DateTimeField()
     waktu_berangkat = models.DateTimeField(default=timezone.now)
     penumpang_datang = models.PositiveIntegerField()
