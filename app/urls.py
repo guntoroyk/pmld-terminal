@@ -5,6 +5,9 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.urls import path, re_path
 from app import views
+from .views import exportbus
+from .views import exportbt
+from .views import exporttb
 
 urlpatterns = [
 
@@ -20,6 +23,9 @@ urlpatterns = [
     re_path(r'^app/barat-timur*\.*', views.barat_timur, name='barat_timur'),
     re_path(r'^app/timur-barat*\.*', views.timur_barat, name='timur_barat'),
     re_path(r'^app/.*\.*', views.app_pages, name='app_pages'),
+    path('exportbus', exportbus, name='exportbus'),
+    path('exportbt', exportbt, name='exportbt'),
+    path('exporttb', exporttb, name='exporttb'),
 
     # Matches any html file
     re_path(r'^.*\.*', views.pages, name='pages'),

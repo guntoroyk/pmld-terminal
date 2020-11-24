@@ -8,7 +8,10 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 # Create your models here.
-
+OPSI_JENIS_TRAYEK = [
+    ("BT", "BT"),
+    ("TB", "TB"),
+]
 
 class TimeStampMixin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -30,7 +33,7 @@ class Bus(models.Model):
 
 
 class PencatatanBus(TimeStampMixin):
-    jenis = models.CharField(max_length=2)
+    jenis = models.CharField(max_length=2, choices=OPSI_JENIS_TRAYEK)
     waktu_datang = models.DateTimeField()
     waktu_berangkat = models.DateTimeField(default=timezone.now)
     penumpang_datang = models.PositiveIntegerField()

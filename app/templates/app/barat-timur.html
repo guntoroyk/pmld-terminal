@@ -18,6 +18,9 @@
 						<div class="card-header">
 							<div class="d-flex align-items-center">
 								<h4 class="card-title">Barat ke Timur</h4>
+								<button class="btn"><i class="fa fa-download"></i>
+									<a href="{% url 'exportbt' %}">Download Pencatatan Bus Barat Timur</a>
+								</button>
 								<button class="btn btn-primary btn-round ml-auto" onclick="location.href='/app/add-pencatatan-bus/'">
 									<i class="fa fa-plus"></i>
 									Tambah
@@ -97,7 +100,8 @@
 										<tr>
 											<td>{{data.bus.nama_po}}</td>
 											<td>{{data.bus.plat_no}}</td>
-											<td>{{data.asal_tujuan_trayek}}</td>
+											<td>{{data.jenis}}</td>
+											<td>{{data.bus.asal_tujuan_trayek}}</td>
 											<td>{{data.waktu_datang}}</td>
 											<td>{{data.waktu_berangkat}}</td>
 											<td>{{data.penumpang_datang}}</td>

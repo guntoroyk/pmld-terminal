@@ -81,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pmld_terminal',
-        'USER': 'root',
-        'PASSWORD': 'toor',
-        'HOST': '127.0.0.1',
+        'USER': 'qwe123123',
+        'PASSWORD': 'qwe123123',
+        'HOST': 'db4free.net',
         'PORT': '3306',
     }
 }

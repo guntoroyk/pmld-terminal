@@ -9,9 +9,11 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from .models import PencatatanBus
+from .models import Bus
 from .forms import PencatatanBusForm
 import logging
-
+import csv
+from itertools import chain
 
 @login_required(login_url="/login/")
 def index(request):
@@ -135,3 +137,49 @@ def edit_pencatatan_bus(request, pk):
         form.save()
         return redirect('/app/barat-timur.html')
     return render(request, 'app/edit-pencatatan-bus.html', {'form': form})
+
+@login_required(login_url="/login/")
+def exportbus(request):
+    response = HttpResponse(content_type='text/csv')
+
+    writer = csv.writer(response)
+    writer.writerow(['Nama PO', 'Plat No', 'Jenis Trayek', 'Jumlah Kursi', 'Asal Tujuan Trayek', ])
+
+    for bus in Bus.objects.all().values_list('nama_po', 'plat_no', 'jenis_trayek', 'jumlah_kursi', 'asal_tujuan_trayek'):
+        writer.writerow(bus)
+
+    response['Content-Disposition'] = 'attachment; filename="Data Bus.csv"'
+
+    return response
+
+@login_required(login_url="/login/")
+def exportbt(request):
+    response = HttpResponse(content_type='text/csv')
+
+    writer = csv.writer(response)
+    writer.writerow(['Nama PO', 'Plat No', 'Jenis Trayek', 'Jumlah Kursi', 'Asal Tujuan Trayek', 'Waktu Kedatangan', 'Waktu Keberangkatan', 'Penumpang Datang', 'Penumpang Turun', 'Penumpang Naik', 'Penumpang Berangkat', 'Keterangan'])
+    
+    data_pencatatan_bus_bt = PencatatanBus.objects.all().filter(jenis="BT").values_list('bus__nama_po', 'bus__plat_no', 'jenis', 'bus__jumlah_kursi', 'bus__asal_tujuan_trayek', 'waktu_datang', 'waktu_berangkat', 'penumpang_datang', 'penumpang_turun', 'penumpang_naik', 'penumpang_berangkat', 'keterangan')
+    
+    for exportbt in data_pencatatan_bus_bt:
+        writer.writerow(exportbt)
+
+    response['Content-Disposition'] = 'attachment; filename="Pencatatan Bus Barat Timur.csv"'
+
+    return response
+
+@login_required(login_url="/login/")
+def exporttb(request):
+    response = HttpResponse(content_type='text/csv')
+
+    writer = csv.writer(response)
+    writer.writerow(['Nama PO', 'Plat No', 'Jenis Trayek', 'Jumlah Kursi', 'Asal Tujuan Trayek', 'Waktu Kedatangan', 'Waktu Keberangkatan', 'Penumpang Datang', 'Penumpang Turun', 'Penumpang Naik', 'Penumpang Berangkat', 'Keterangan'])
+    
+    data_pencatatan_bus_tb = PencatatanBus.objects.all().filter(jenis="TB").values_list('bus__nama_po', 'bus__plat_no', 'jenis', 'bus__jumlah_kursi', 'bus__asal_tujuan_trayek', 'waktu_datang', 'waktu_berangkat', 'penumpang_datang', 'penumpang_turun', 'penumpang_naik', 'penumpang_berangkat', 'keterangan')
+    
+    for exporttb in data_pencatatan_bus_tb:
+        writer.writerow(exporttb)
+
+    response['Content-Disposition'] = 'attachment; filename="Pencatatan Bus Timur Barat.csv"'
+
+    return response
