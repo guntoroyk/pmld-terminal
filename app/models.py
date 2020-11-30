@@ -27,7 +27,8 @@ class Bus(models.Model):
     jenis_trayek = models.CharField(max_length=5)
     jumlah_kursi = models.PositiveIntegerField(default=0)
     asal_tujuan_trayek = models.CharField(max_length=50)
-
+    class Meta:
+        db_table = "app_bus"
     def __str__(self):
         return self.nama_po + ' - ' + self.plat_no
 

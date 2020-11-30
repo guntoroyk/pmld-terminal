@@ -112,6 +112,15 @@ def timur_barat(request):
     html_template = loader.get_template('app/timur-barat.html')
     return HttpResponse(html_template.render(context, request))
 
+@login_required(login_url="/login/")
+def pencarian_bus(request):
+    context = {}
+    data_pencarian_bus = Bus.objects.all()
+    print(data_pencarian_bus)
+    # logging.info(data_pencatatan_bus)
+    context['data_pencarian_bus'] = data_pencarian_bus
+    html_template = loader.get_template('app/data-bus.html')
+    return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
 def add_pencatatan_bus(request):

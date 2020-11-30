@@ -23,6 +23,7 @@ urlpatterns = [
     re_path(r'^app/barat-timur*\.*', views.barat_timur, name='barat_timur'),
     re_path(r'^app/timur-barat*\.*', views.timur_barat, name='timur_barat'),
     re_path(r'^app/.*\.*', views.app_pages, name='app_pages'),
+    #path('app/data-bus', views.pencarian_bus, 'pencarianbus'),
     path('exportbus', exportbus, name='exportbus'),
     path('exportbt', exportbt, name='exportbt'),
     path('exporttb', exporttb, name='exporttb'),
