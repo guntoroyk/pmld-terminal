@@ -10,14 +10,13 @@
 	<div class="content">
 		<div class="page-inner">
 			<div class="page-header">
-				<h4 class="page-title">Pencatatan Bus</h4>
+				<h4 class="page-title">Pencatatan Bus | Barat - Timur</h4>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header">
 							<div class="d-flex align-items-center">
-								<h4 class="card-title">Barat ke Timur</h4>
 								<button class="btn"><i class="fa fa-download"></i>
 									<a href="{% url 'exportbt' %}">Download Pencatatan Bus Barat Timur</a>
 								</button>
@@ -81,9 +80,10 @@
 								<table id="add-row" class="display table table-striped table-hover" >
 									<thead>
 										<tr>
+											<th>Jenis</th>
 											<th>Bus</th>
 											<th>No Pol</th>
-											<th>Asal Tujuan</th>
+											<th>Trayek</th>
 											<th>Waktu Kedatangan</th>
 											<th>Waktu Keberangkatan</th>
 											<th>Penumpang Datang</th>
@@ -98,9 +98,9 @@
 									<tbody>
 										{% for data in data_pencatatan_bus %}
 										<tr>
+											<td>{{data.jenis}}</td>
 											<td>{{data.bus.nama_po}}</td>
 											<td>{{data.bus.plat_no}}</td>
-											<td>{{data.jenis}}</td>
 											<td>{{data.bus.asal_tujuan_trayek}}</td>
 											<td>{{data.waktu_datang}}</td>
 											<td>{{data.waktu_berangkat}}</td>
@@ -115,56 +115,14 @@
 													<button onclick="location.href='/app/edit-pencatatan-bus/{{data.id}}/'" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit">
 														<i class="fa fa-edit"></i>
 													</button>
-													<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+													<!-- <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
 														<i class="fa fa-times"></i>
-													</button>
+													</button> -->
 												</div>
 											</td>
 										</tr>
 										
 										{% endfor %}
-										<!-- <tr>
-											<td>Sinar Jaya</td>
-											<td>Klaten-Lampung</td>
-											<td>11.10</td>
-											<td>11.12</td>
-											<td>0</td>
-											<td>0</td>
-											<td>5</td>
-											<td>5</td>
-											<td>Berangkat</td>
-											<td>
-												<div class="form-button-action">
-													<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-														<i class="fa fa-edit"></i>
-													</button>
-													<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-														<i class="fa fa-times"></i>
-													</button>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Sumber Selamat</td>
-											<td>Jogja-Solo</td>
-											<td>12.00</td>
-											<td>12.01</td>
-											<td>10</td>
-											<td>7</td>
-											<td>2</td>
-											<td>5</td>
-											<td>LINTAS</td>
-											<td>
-												<div class="form-button-action">
-													<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-														<i class="fa fa-edit"></i>
-													</button>
-													<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-														<i class="fa fa-times"></i>
-													</button>
-												</div>
-											</td>
-										</tr> -->
 									</tbody>
 								</table>
 							</div>

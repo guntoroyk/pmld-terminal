@@ -1,0 +1,56 @@
+{% extends "layouts/base.html" %}
+{% load widget_tweaks %}
+
+{% block title %} Edit Data Bus {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<div class="page-header">
+				<h4 class="page-title">Edit Data Bus</h4>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Bus</div>
+            </div>
+            <form method="post" novalidate>
+							{% csrf_token %}
+							<div class="card-body">
+              {% for hidden_field in form.hidden_fields %}
+              {{ hidden_field }}
+              {% endfor %}
+              {% for field in form.visible_fields %}
+              <div class="form-group">
+                  {{ field.label_tag }}
+                  {% render_field field class="form-control" %}
+                  {% if field.help_text %}
+                  <small class="form-text text-muted">{{ field.help_text }}</small>
+                  {% endif %}
+              </div>
+							{% endfor %}
+							</div>
+							<div class="card-action">
+								<button type="submit" class="btn btn-primary">Simpan</button>
+							</div>
+          </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<!-- <script src="/static/assets/js/setting-demo2.js"></script> -->
+
+{% endblock javascripts %}	
