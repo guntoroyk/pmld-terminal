@@ -4,7 +4,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<a href="/app/index.html" class="logo">
+				<a href="/" class="logo">
 					<img src="/static/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +27,7 @@
 				{% if request.user.is_authenticated %}
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
+						<!-- <h3 style="color: white">Sistem Informasi Pencatatan Bus & Penumpang</h3> -->
 						<form class="navbar-left navbar-form nav-search mr-md-3">
 							<div class="input-group">
 								<div class="input-group-prepend">
@@ -114,7 +115,7 @@
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item dropdown hidden-caret">
+						<!-- <li class="nav-item dropdown hidden-caret">
 							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fa fa-bell"></i>
 								<span class="notification">4</span>
@@ -171,8 +172,8 @@
 									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
 								</li>
 							</ul>
-						</li>
-						<li class="nav-item dropdown hidden-caret">
+						</li> -->
+						<!-- <li class="nav-item dropdown hidden-caret">
 							<a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
 								<i class="fas fa-layer-group"></i>
 							</a>
@@ -224,7 +225,7 @@
 									</div>
 								</div>
 							</div>
-						</li>
+						</li> -->
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
@@ -246,10 +247,10 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">My Profile</a>
+										<!-- <a class="dropdown-item" href="#">My Profile</a>
 										<a class="dropdown-item" href="#">My Balance</a>
 										<a class="dropdown-item" href="#">Inbox</a>
-										<div class="dropdown-divider"></div>
+										<div class="dropdown-divider"></div> -->
 										<a class="dropdown-item" href="#">Account Setting</a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>

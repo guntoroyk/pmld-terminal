@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} UI Datatables {% endblock %} 
+{% block title %} Timur ke Barat {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -109,9 +109,10 @@
 											<td>{{data.penumpang_naik}}</td>
 											<td>{{data.penumpang_berangkat}}</td>
 											<td>{{data.keterangan}}</td>
+											<td>{{data.created_at}}</td>
 											<td>
 												<div class="form-button-action">
-													<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+													<button onclick="location.href='/app/edit-pencatatan-bus/{{data.id}}/'" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit">
 														<i class="fa fa-edit"></i>
 													</button>
 													<!-- <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">

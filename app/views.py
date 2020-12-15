@@ -8,6 +8,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
+from django.db.models import Q, Sum
 from .models import PencatatanBus
 from .models import Bus
 from .forms import PencatatanBusForm
@@ -15,18 +16,33 @@ from .forms import BusForm
 import logging
 import csv
 from itertools import chain
+from json import dumps
 
 
 @login_required(login_url="/login/")
 def index(request):
+    bus_tiba = PencatatanBus.objects.filter(Q(keterangan='TIBA')).count()
+    bus_berangkat = PencatatanBus.objects.filter(
+        Q(keterangan='BERANGKAT')).count()
+    bus_lintas = PencatatanBus.objects.filter(Q(keterangan='LINTAS')).count()
+    data_penumpang = PencatatanBus.objects.aggregate(
+        penumpang_naik=Sum('penumpang_naik'),
+        penumpang_turun=Sum('penumpang_turun'),
+        penumpang_datang=Sum('penumpang_datang'),
+        penumpang_berangkat=Sum('penumpang_berangkat'))
 
-    # context = {}
-    # context['segment'] = 'index'
-
-    # html_template = loader.get_template('index.html')
-    # return HttpResponse(html_template.render(context, request))
-
-    return redirect("/app/index.html")
+    dataDictionary = {
+        'bus_tiba': bus_tiba,
+        'bus_berangkat': bus_berangkat,
+        'bus_lintas': bus_lintas,
+    }
+    dataJSON = dumps(dataDictionary)
+    return render(request,
+                  'app/index.html',
+                  context={
+                      'data_bus': dataJSON,
+                      'data_penumpang': data_penumpang
+                  })
 
 
 @login_required(login_url="/login/")
