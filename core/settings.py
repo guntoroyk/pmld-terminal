@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
-    'jquery',
     'bootstrap_datepicker_plus',
     'app'  # Enable the inner app
 ]
