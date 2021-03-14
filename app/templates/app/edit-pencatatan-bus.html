@@ -1,45 +1,46 @@
 {% extends "layouts/base.html" %}
 {% load widget_tweaks %}
 
-{% block title %} Edit Pencatatan Bus {% endblock %} 
+{% block title %} Edit Pencatatan Bus {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
+{{ form.media }}
 
-	<div class="content">
-		<div class="page-inner">
-			<div class="page-header">
-				<h4 class="page-title">Edit Pencatatan Bus</h4>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							<div class="card-title">Bus</div>
-            </div>
-            <form method="post" novalidate>
-							{% csrf_token %}
-							<div class="card-body">
-              {% for hidden_field in form.hidden_fields %}
-              {{ hidden_field }}
-              {% endfor %}
-              {% for field in form.visible_fields %}
-              <div class="form-group">
-                  {{ field.label_tag }}
-                  {% render_field field class="form-control" %}
-                  {% if field.help_text %}
-                  <small class="form-text text-muted">{{ field.help_text }}</small>
-                  {% endif %}
-              </div>
+<div class="content">
+	<div class="page-inner">
+		<div class="page-header">
+			<h4 class="page-title">Edit Pencatatan Bus</h4>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Bus</div>
+					</div>
+					<form method="post" novalidate>
+						{% csrf_token %}
+						<div class="card-body">
+							{% for hidden_field in form.hidden_fields %}
+							{{ hidden_field }}
 							{% endfor %}
+							{% for field in form.visible_fields %}
+							<div class="form-group">
+								{{ field.label_tag }}
+								{% render_field field class="form-control" %}
+								{% if field.help_text %}
+								<small class="form-text text-muted">{{ field.help_text }}</small>
+								{% endif %}
 							</div>
-							<div class="card-action">
-								<button type="submit" class="btn btn-primary">submit</button>
-							</div>
-          </form>
-						<!-- <div class="card-body">
+							{% endfor %}
+						</div>
+						<div class="card-action">
+							<button type="submit" class="btn btn-primary">submit</button>
+						</div>
+					</form>
+					<!-- <div class="card-body">
 							<div class="row">
 								<div class="col-md-6 col-lg-12">
                   <div class="form-group">
@@ -91,18 +92,18 @@
 							<button class="btn btn-success">Submit</button>
 							<button class="btn btn-danger">Cancel</button>
 						</div> -->
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
 
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/static/assets/js/setting-demo2.js"></script>
+<!-- Atlantis DEMO methods, don't include it in your project! -->
+<script src="/static/assets/js/setting-demo2.js"></script>
 
-{% endblock javascripts %}	
+{% endblock javascripts %}

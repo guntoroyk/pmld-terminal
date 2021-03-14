@@ -12,3 +12,4 @@ whitenoise
 pymysql
 pyyaml
 django-widget-tweaks
+django-bootstrap-datepicker-plus

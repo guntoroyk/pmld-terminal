@@ -9,14 +9,16 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from django.db.models import Q, Sum
+from django.utils import timezone
 from .models import PencatatanBus
 from .models import Bus
-from .forms import PencatatanBusForm
+from .forms import PencatatanBusForm, EditPencatatanBusForm
 from .forms import BusForm
 import logging
 import csv
 from itertools import chain
 from json import dumps
+from bootstrap_datepicker_plus import DateTimePickerInput
 
 
 @login_required(login_url="/login/")
@@ -175,6 +177,9 @@ def add_pencatatan_bus(request):
             form.save()
             return redirect('/app/barat-timur.html')
     form = PencatatanBusForm()
+    form.fields['waktu_datang'].widget = DateTimePickerInput()
+    form.fields['waktu_datang'].initial = timezone.now
+    # DateInput = partial(form.DateInput, {'class': 'datepicker'})
 
     print(form)
 
@@ -186,10 +191,13 @@ def edit_pencatatan_bus(request, pk):
     # return HttpResponse("You're looking at question %s." % pk)
     print('masukkkkk')
     pencatatan_bus = get_object_or_404(PencatatanBus, pk=pk)
-    form = PencatatanBusForm(request.POST or None, instance=pencatatan_bus)
+    form = EditPencatatanBusForm(request.POST or None, instance=pencatatan_bus)
     if form.is_valid():
         form.save()
         return redirect('/app/barat-timur.html')
+    form.fields['waktu_datang'].widget = DateTimePickerInput()
+    form.fields['waktu_berangkat'].widget = DateTimePickerInput()
+
     return render(request, 'app/edit-pencatatan-bus.html', {'form': form})
 
 
