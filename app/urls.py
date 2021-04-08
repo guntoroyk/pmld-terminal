@@ -13,6 +13,7 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='home'),
+    path('public',views.public, name='public'),
     path('app', views.app_home, name='app_home'),
     path('app/add-pencatatan-bus/',
          views.add_pencatatan_bus,
