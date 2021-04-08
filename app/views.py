@@ -38,6 +38,7 @@ def index(request):
         'bus_berangkat': bus_berangkat,
         'bus_lintas': bus_lintas,
     }
+
     dataJSON = dumps(dataDictionary)
     return render(request,
                   'app/index.html',
@@ -46,6 +47,31 @@ def index(request):
                       'data_penumpang': data_penumpang
                   })
 
+
+def public(request):
+    bus_tiba = PencatatanBus.objects.filter(Q(keterangan='TIBA')).count()
+    bus_berangkat = PencatatanBus.objects.filter(
+        Q(keterangan='BERANGKAT')).count()
+    bus_lintas = PencatatanBus.objects.filter(Q(keterangan='LINTAS')).count()
+    data_penumpang = PencatatanBus.objects.aggregate(
+        penumpang_naik=Sum('penumpang_naik'),
+        penumpang_turun=Sum('penumpang_turun'),
+        penumpang_datang=Sum('penumpang_datang'),
+        penumpang_berangkat=Sum('penumpang_berangkat'))
+
+    dataDictionary = {
+        'bus_tiba': bus_tiba,
+        'bus_berangkat': bus_berangkat,
+        'bus_lintas': bus_lintas,
+    }
+    
+    dataJSON = dumps(dataDictionary)
+    return render(request,
+                  'app/public.html',
+                  context={
+                      'data_bus': dataJSON,
+                      'data_penumpang': data_penumpang
+                  })
 
 @login_required(login_url="/login/")
 def pages(request):
