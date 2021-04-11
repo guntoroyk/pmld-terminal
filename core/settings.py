@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pmld_terminal',  # nama database mysql mu
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'toor',
         'HOST': 'localhost',  # contoh localhost, 192.168.1.1, db4free.net, dll
         'PORT': '3306',
     }

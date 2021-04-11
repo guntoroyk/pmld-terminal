@@ -160,7 +160,7 @@ def timur_barat(request):
 
 
 @login_required(login_url="/login/")
-def pencarian_bus(request):
+def list_data_bus(request):
     context = {}
     data_pencarian_bus = Bus.objects.all()
     print(data_pencarian_bus)
@@ -186,25 +186,62 @@ def add_bus(request):
 
 @login_required(login_url="/login/")
 def edit_bus(request, pk):
-    print('masukkkkk')
     bus = get_object_or_404(Bus, pk=pk)
     form = BusForm(request.POST or None, instance=bus)
     if form.is_valid():
         form.save()
-        return redirect('/app/data-bus.html')
+        return redirect('/app/data-bus')
     return render(request, 'app/edit-data-bus.html', {'form': form})
 
+@login_required(login_url="/login/")
+def delete_data_bus(request, pk):
+    print('masuk sini')
+    obj = get_object_or_404(Bus, id=pk)
+    if (request.method == 'POST'):
+        obj.delete()
+        return redirect('/app/data-bus')
+    context = {'bus': obj}
+    return render(request, 'app/delete-data-bus.html', context)
+
+@login_required(login_url="/login/")
+def list_pencatatan_bus(request):
+    jenis = request.GET.get('jenis', '')
+
+    context = {}
+
+    data_pencatatan_bus = PencatatanBus.objects.order_by('-created_at')
+
+    if (jenis):
+        context['jenis'] = jenis
+        data_pencatatan_bus = data_pencatatan_bus.filter(jenis=jenis)
+
+    print(data_pencatatan_bus)
+    # logging.info(data_pencatatan_bus)
+    context['data_pencatatan_bus'] = data_pencatatan_bus
+
+    html_template = loader.get_template('app/list-pencatatan-bus.html')
+    return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
 def add_pencatatan_bus(request):
+    jenis = request.GET.get('jenis', '')
+
     if request.method == 'POST':
         form = PencatatanBusForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/app/barat-timur.html')
+            if (jenis):
+                return redirect('/app/pencatatan-bus?jenis=' + jenis)
+            return redirect('/app/pencatatan-bus')
+            
     form = PencatatanBusForm()
     form.fields['waktu_datang'].widget = DateTimePickerInput()
     form.fields['waktu_datang'].initial = timezone.now
+    form.fields['keterangan'].initial = 'LINTAS'
+
+    if (jenis):
+        form.fields['jenis'].initial = jenis
+
     # DateInput = partial(form.DateInput, {'class': 'datepicker'})
 
     print(form)
@@ -214,17 +251,35 @@ def add_pencatatan_bus(request):
 
 @login_required(login_url="/login/")
 def edit_pencatatan_bus(request, pk):
-    # return HttpResponse("You're looking at question %s." % pk)
-    print('masukkkkk')
     pencatatan_bus = get_object_or_404(PencatatanBus, pk=pk)
     form = EditPencatatanBusForm(request.POST or None, instance=pencatatan_bus)
     if form.is_valid():
         form.save()
-        return redirect('/app/barat-timur.html')
+        return redirect('/app/pencatatan-bus?jenis=' + pencatatan_bus.jenis)
+        
     form.fields['waktu_datang'].widget = DateTimePickerInput()
     form.fields['waktu_berangkat'].widget = DateTimePickerInput()
 
     return render(request, 'app/edit-pencatatan-bus.html', {'form': form})
+
+@login_required(login_url="/login/")
+def delete_pencatatan_bus(request, pk):
+    jenis = request.GET.get('jenis', '')
+
+    obj = get_object_or_404(PencatatanBus, id=pk)
+    if (request.method == 'POST'):
+        print('masukkkkkkkkkkkk##')
+        obj.delete()
+
+        if (jenis):
+            return redirect('/app/pencatatan-bus?jenis=' + jenis)
+        return redirect('/app/pencatatan-bus')
+
+    context = {
+        'pencatatan_bus': obj,
+        'jenis': jenis
+    }
+    return render(request, 'app/delete-pencatatan-bus.html', context)
 
 
 @login_required(login_url="/login/")
@@ -306,24 +361,3 @@ def exporttb(request):
         'Content-Disposition'] = 'attachment; filename="Pencatatan Bus Timur Barat.csv"'
 
     return response
-
-
-@login_required(login_url="/login/")
-def delete_pencatatan_bus(request, pk):
-    obj = get_object_or_404(PencatatanBus, id=pk)
-    if (request.method == 'POST'):
-        obj.delete()
-        return redirect('/app/barat-timur')
-    context = {'pencatatan_bus': obj}
-    return render(request, 'app/delete-pencatatan-bus.html', context)
-
-
-@login_required(login_url="/login/")
-def delete_data_bus(request, pk):
-    print('masuk sini')
-    obj = get_object_or_404(Bus, id=pk)
-    if (request.method == 'POST'):
-        obj.delete()
-        return redirect('/app/data-bus')
-    context = {'bus': obj}
-    return render(request, 'app/delete-data-bus.html', context)
