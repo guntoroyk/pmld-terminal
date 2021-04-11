@@ -1,0 +1,36 @@
+{% extends "layouts/base.html" %}
+{% load widget_tweaks %}
+
+{% block title %} Hapus Pencatatan Bus {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="content d-flex justify-content-center align-items-start">
+	<!-- <div class="container" style="border: 1px solid pink"> -->
+	<form action='.' method='POST' style="margin-top: 40px">{% csrf_token %}
+		<!-- <h1>Apakah yakin ingin menghapus?</h1>
+			<p><input type='submit' value='Ya' /> <a href='../'>Tidak</a></p> -->
+
+		<div class=" card bg-light mb-2" style="max-width: 30rem;">
+			<div class="card-header">
+				<h3>Hapus Pencatatan Bus</h3>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Apakah yakin ingin menghapus?</h5>
+				<p class="card-text">Data yang telah dihapus tidak dapat dikembalikan lagi.</p>
+				<button type="submit" class="btn btn-primary">Ya</button>
+				<a href='/app/data-bus' class="btn btn-danger">Tidak</a></p>
+			</div>
+		</div>
+	</form>
+	<!-- </div> -->
+
+</div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}
