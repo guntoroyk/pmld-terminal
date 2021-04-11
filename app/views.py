@@ -280,3 +280,24 @@ def exporttb(request):
         'Content-Disposition'] = 'attachment; filename="Pencatatan Bus Timur Barat.csv"'
 
     return response
+
+
+@login_required(login_url="/login/")
+def delete_pencatatan_bus(request, pk):
+    obj = get_object_or_404(PencatatanBus, id=pk)
+    if (request.method == 'POST'):
+        obj.delete()
+        return redirect('/app/barat-timur')
+    context = {'pencatatan_bus': obj}
+    return render(request, 'app/delete-pencatatan-bus.html', context)
+
+
+@login_required(login_url="/login/")
+def delete_data_bus(request, pk):
+    print('masuk sini')
+    obj = get_object_or_404(Bus, id=pk)
+    if (request.method == 'POST'):
+        obj.delete()
+        return redirect('/app/data-bus')
+    context = {'bus': obj}
+    return render(request, 'app/delete-data-bus.html', context)
