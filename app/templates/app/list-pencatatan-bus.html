@@ -8,9 +8,16 @@
 {% block content %}
 
 <div class="content">
+	<!-- <form method="GET"> -->
 	<div class="page-inner">
 		<div class="page-header">
-			<h4 class="page-title">Pencatatan Bus | Barat - Timur</h4>
+			{% if jenis == 'BT' %}
+			<h4 class="page-title">Pencatatan Bus | Barat Timur</h4>
+			{% elif jenis == 'TB' %}
+			<h4 class="page-title">Pencatatan Bus | Timur Barat</h4>
+			{% else %}
+			<h4 class="page-title">Pencatatan Bus</h4>
+			{% endif %}
 		</div>
 		<div class="row">
 			<div class="col-md-12">
@@ -18,12 +25,54 @@
 					<div class="card-header">
 						<div class="d-flex align-items-center">
 							<button class="btn"><i class="fa fa-download"></i>
-								<a href="{% url 'exportbt' %}">Download Pencatatan Bus Barat Timur</a>
+								<a href="export-pencatatan-bus?jenis={{jenis}}&start_date={{start_date}}&end_date={{end_date}}">Download
+									Pencatatan Bus</a>
 							</button>
-							<button class="btn btn-primary btn-round ml-auto" onclick="location.href='/app/add-pencatatan-bus/'">
+							<form method="GET" class="d-flex align-items-center">
+								<input name="jenis" value="{{jenis}}" style="display: none" />
+								<div class="form-group">
+									<!-- <label>Tgl Awal</label> -->
+									<div class="input-group date">
+										<div class="input-group-addon">
+											<span class="glyphicon glyphicon-th"></span>
+										</div>
+										<input placeholder="Tanggal mulai" type="text" class="form-control datepicker" name="start_date"
+											value={{start_date}}>
+									</div>
+								</div>
+								s/d
+								<div class="form-group">
+									<!-- <label>Tgl Awal</label> -->
+									<div class="input-group date">
+										<div class="input-group-addon">
+											<span class="glyphicon glyphicon-th"></span>
+										</div>
+										<input placeholder="Tanggal akhir" type="text" class="form-control datepicker" name="end_date"
+											value="{{end_date}}">
+									</div>
+								</div>
+								<button class="btn" type="submit">
+									Cari
+								</button>
+							</form>
+							{% if jenis == 'BT' %}
+							<button class="btn btn-primary btn-round ml-auto"
+								onclick="location.href='/app/pencatatan-bus/add?jenis=BT'">
 								<i class="fa fa-plus"></i>
 								Tambah
 							</button>
+							{% elif jenis == 'TB' %}
+							<button class="btn btn-primary btn-round ml-auto"
+								onclick="location.href='/app/pencatatan-bus/add?jenis=TB'">
+								<i class="fa fa-plus"></i>
+								Tambah
+							</button>
+							{% else %}
+							<button class="btn btn-primary btn-round ml-auto" onclick="location.href='/app/pencatatan-bus/add'">
+								<i class="fa fa-plus"></i>
+								Tambah
+							</button>
+							{% endif %}
 						</div>
 					</div>
 					<div class="card-body">
@@ -84,17 +133,27 @@
 										<td>{{data.created_at}}</td>
 										<td>
 											<div class="form-button-action">
-												<button onclick="location.href='/app/edit-pencatatan-bus/{{data.id}}/'" type="button"
+												<button onclick="location.href='/app/pencatatan-bus/{{data.id}}'" type="button"
 													data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg"
 													data-original-title="Edit">
 													<i class="fa fa-edit"></i>
 												</button>
-												<button onclick="location.href='/app/pencatatan-bus/{{data.id}}/delete/'" type="button"
+												{% if jenis == 'BT' %}
+												<button onclick="location.href='/app/pencatatan-bus/{{data.id}}/delete?jenis=BT'" type="button"
 													data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 													<i class="fa fa-times"></i>
 												</button>
-
-
+												{% elif jenis == 'TB' %}
+												<button onclick="location.href='/app/pencatatan-bus/{{data.id}}/delete?jenis=TB'" type="button"
+													data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
+													<i class="fa fa-times"></i>
+												</button>
+												{% else %}
+												<button onclick="location.href='/app/pencatatan-bus/{{data.id}}/delete'" type="button"
+													data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
+													<i class="fa fa-times"></i>
+												</button>
+												{% endif %}
 											</div>
 										</td>
 									</tr>
@@ -108,6 +167,8 @@
 			</div>
 		</div>
 	</div>
+	<!-- </form> -->
+
 </div>
 
 {% endblock content %}
@@ -122,6 +183,14 @@
 		// Add Row
 		$('#add-row').DataTable({
 			"pageLength": 5,
+		});
+
+		$(function () {
+			$(".datepicker").datepicker({
+				format: 'yyyy-mm-dd',
+				autoclose: true,
+				todayHighlight: true,
+			});
 		});
 
 		// var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';

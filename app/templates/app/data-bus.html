@@ -21,7 +21,7 @@
 							<button class="btn"><i class="fa fa-download"></i>
 								<a href="{% url 'exportbus' %}">Download Data Bus</a>
 							</button>
-							<button class="btn btn-primary btn-round ml-auto" onclick="location.href='/app/tambah-data-bus/'">
+							<button class="btn btn-primary btn-round ml-auto" onclick="location.href='/app/data-bus/add'">
 								<i class="fa fa-plus"></i>
 								Tambah
 							</button>
@@ -97,12 +97,11 @@
 										<td>{{data.jumlah_kursi}}</td>
 										<td>
 											<div class="form-button-action">
-												<button onclick="location.href='/app/edit-data-bus/{{data.id}}/'" type="button"
-													data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg"
-													data-original-title="Edit">
+												<button onclick="location.href='/app/data-bus/{{data.id}}'" type="button" data-toggle="tooltip"
+													title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit">
 													<i class="fa fa-edit"></i>
 												</button>
-												<button onclick="location.href='/app/data-bus/{{data.id}}/delete/'" type="button"
+												<button onclick="location.href='/app/data-bus/{{data.id}}/delete'" type="button"
 													data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 													<i class="fa fa-times"></i>
 												</button>
