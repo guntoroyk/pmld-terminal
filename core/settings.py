@@ -93,9 +93,7 @@ DATABASES = {
     #     'HOST': 'localhost',  # contoh localhost, 192.168.1.1, db4free.net, dll
     #     'PORT': '3306',
     # }
-    'default': dj_database_url.config(
-        default=config('CLEARDB_DATABASE_URL')
-    )
+    'default': dj_database_url.config(default=config('CLEARDB_DATABASE_URL'))
 }
 
 # Password validation
@@ -146,7 +144,7 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'core/static'), )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 #############################################################
 #############################################################
