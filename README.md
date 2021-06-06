@@ -39,10 +39,13 @@ $
 $ # Install modules - SQLite Storage
 $ pip3 install -r requirements.txt
 $
+$ # Edit .env
+$ Edit DATABASE_URL env key with url of database to be used
+$
 $ # Create tables
 $ python manage.py makemigrations
 $ python manage.py migrate
-$ 
+$
 $ # Isi database dengan ini (windows)
 $ python.exe .\manage.py loaddata .\app\fixtures\fixture.yaml
 $
