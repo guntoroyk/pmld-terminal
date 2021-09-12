@@ -1,19 +1,11 @@
-# [Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis)
+# pmld-terminal
 
-> **Open-Source Admin Dashboard** coded in **Django Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features:
+Source code for "Sistem Informasi & Manajemen Terminal Ir. Soekarno Klaten".
 
-- UI Kit: **Atlantis Lite** (Free Version) provided by **ThemeKita**
-- UI-Ready app, SQLite Database, Django Native ORM
-- Modular design, clean code-base
-- Session-Based Authentication, Forms validation
-- Deployment scripts: Docker, Gunicorn / Nginx
-- Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
+In collaboration with Mrs. Unan Yusmaniar Oktiawati, S.T., M.Sc., Ph.D. in the Independent Cross-Disciplined Project courses at the Even Semester of 2021.
+Internet Engineering, Vocational College Universitas Gadjah Mada.
 
-<br />
-
-![Django Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis/master/media/django-dashboard-atlantis-screen.png)
-
-<br />
+Live application: https://pmld-terminal.herokuapp.com/public
 
 ## How to use it
 
@@ -207,14 +199,3 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 <br />
 
-## Credits & Links
-
-- [Django](https://www.djangoproject.com/) - The official website
-- [Boilerplate Code](https://appseed.us/boilerplate-code) - Index provided by **AppSeed**
-- [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
-
-<br />
-
----
-
-[Django Dashboard Atlantis](https://appseed.us/admin-dashboards/django-dashboard-atlantis) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
